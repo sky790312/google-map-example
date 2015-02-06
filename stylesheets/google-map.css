@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/* line 1, ../sass/google-map.scss */
+.map-preview {
+  margin: 15px 0;
+  width: 280px;
+  cursor: pointer;
+  text-align: center;
+  border: solid 1px #e4e4e4;
+  border-radius: 5px;
+  background: url("../images/default_map.png") no-repeat center #eee;
+  background-image: url("http://maps.googleapis.com/maps/api/staticmap?center=35.002981,135.754527&zoom=15&size=230x80&markers=icon:http://www.eztravel.com.tw/htf_2015/marker.png%7C35.002981,135.754527&sensor=false&key=AIzaSyBdc3ok3ONL14aKyfBXENnDJ6C5rVpyihI");
+}
+/* line 11, ../sass/google-map.scss */
+.map-preview > div {
+  margin-top: 120px;
+  color: #080;
+  font-size: 15px;
+  line-height: 36px;
+  border-top: solid 1px #e4e4e4;
+  font-family: Arial,"微軟正黑體","Microsoft JhengHei";
+}
+/* line 19, ../sass/google-map.scss */
+.map-preview > div > i {
+  display: inline-block;
+  background-position: -195px 0;
+  margin: -5px 5px 0 0;
+  vertical-align: middle;
+}
+/* line 28, ../sass/google-map.scss */
+.map-preview:hover > div {
+  color: #00ab00;
+}
+/* line 31, ../sass/google-map.scss */
+.map-preview:hover > div > i {
+  background-position: -195px -20px;
+}
+
+/* line 38, ../sass/google-map.scss */
+#gmapModal {
+  top: 50%;
+  margin-top: -280px;
+}
+/* line 42, ../sass/google-map.scss */
+#gmapModal .modal-dialog {
+  width: 732px;
+}
+/* line 45, ../sass/google-map.scss */
+#gmapModal .modal-dialog .modal-content {
+  padding: 5px;
+}
+
+/* line 51, ../sass/google-map.scss */
+#gmap {
+  width: 700px;
+  height: 500px;
+}
+
+/* line 56, ../sass/google-map.scss */
+#infowindow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 284px;
+}
+/* line 61, ../sass/google-map.scss */
+#infowindow a {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #212121;
+}
+/* line 67, ../sass/google-map.scss */
+#infowindow a:hover {
+  color: #00ab00;
+}
+/* line 72, ../sass/google-map.scss */
+#infowindow img {
+  width: 90px;
+  float: left;
+  margin-right: 5px;
+}
+/* line 78, ../sass/google-map.scss */
+#infowindow .text-score {
+  color: #00ab00;
+  font-size: 20px;
+  font-family: Arial,Helvetica,sans-serif;
+  line-height: 20px;
+}
