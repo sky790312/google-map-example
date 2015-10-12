@@ -85,3 +85,196 @@
   font-family: Arial,Helvetica,sans-serif;
   line-height: 20px;
 }
+
+/* line 93, ../sass/google-map.scss */
+#animation ~ *,
+#animation ~ * * {
+  animation-play-state: paused !important;
+}
+/* line 97, ../sass/google-map.scss */
+#animation ~ *::before, #animation ~ *::after,
+#animation ~ * *::before,
+#animation ~ * *::after {
+  animation-play-state: paused !important;
+}
+
+/* line 103, ../sass/google-map.scss */
+#animation:checked ~ *,
+#animation:checked ~ * * {
+  animation-play-state: running !important;
+}
+/* line 107, ../sass/google-map.scss */
+#animation:checked ~ *::before, #animation:checked ~ *::after,
+#animation:checked ~ * *::before,
+#animation:checked ~ * *::after {
+  animation-play-state: running !important;
+}
+
+/* line 113, ../sass/google-map.scss */
+[role="img"] {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  border: 1px solid #333;
+  transform-origin: 0 0;
+  overflow: hidden;
+}
+
+/* line 123, ../sass/google-map.scss */
+.background {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 1000px;
+  height: 1000px;
+  border-radius: 100%;
+  background: black;
+  transform: translate(-50%, -50%) scale(0.17);
+  animation: background linear 5s infinite;
+}
+
+/* line 139, ../sass/google-map.scss */
+.pacman {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: #000;
+  animation: pac-man linear 5s infinite;
+}
+
+/* line 155, ../sass/google-map.scss */
+.mouth {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 3;
+  width: 160px;
+  height: 160px;
+  transform: translate(50%, -50%);
+  animation: bite linear .4s infinite;
+}
+/* line 166, ../sass/google-map.scss */
+.mouth::before {
+  display: block;
+  width: 160px;
+  height: 160px;
+  transform: rotateZ(45deg);
+  background-color: #000;
+  animation: bite-opacity linear 5s infinite;
+  content: '';
+}
+
+/* line 178, ../sass/google-map.scss */
+.dots {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  animation: dot-opacity linear 5s infinite;
+}
+/* line 188, ../sass/google-map.scss */
+.dots::before, .dots::after {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  right: -100%;
+  width: 30px;
+  height: 30px;
+  transform: translateY(-50%);
+  background-color: #fab99a;
+  animation: dot linear .4s infinite;
+  content: '';
+}
+/* line 203, ../sass/google-map.scss */
+.dots::after {
+  animation-delay: 0.2s;
+}
+
+@keyframes background {
+  0% {
+    transform: translate(-50%, -50%) scale(0.17);
+    border-radius: 100%;
+  }
+  20% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  90% {
+    transform: translate(-50%, -50%) scale(1);
+    border-radius: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.2);
+    border-radius: 0;
+  }
+}
+@keyframes pac-man {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    border-radius: 0;
+  }
+  10% {
+    transform: translate(-50%, -50%) rotate(180deg);
+    border-radius: 0;
+  }
+  20%, 60% {
+    transform: translate(-50%, -50%) rotate(360deg);
+    border-radius: 100%;
+    background: #fdff35;
+  }
+  80% {
+    transform: translate(160%, -50%) rotate(360deg);
+    background: #fdff35;
+  }
+  100% {
+    transform: translate(160%, -50%) rotate(360deg);
+    border-radius: 100%;
+    background: #fdff35;
+  }
+}
+@keyframes bite {
+  0% {
+    transform: translate(50%, -50%) rotateX(0);
+  }
+  50% {
+    transform: translate(50%, -50%) rotateX(-90deg);
+  }
+  100% {
+    transform: translate(50%, -50%) rotateX(0);
+  }
+}
+@keyframes bite-opacity {
+  0%, 19% {
+    opacity: 0;
+  }
+  22%, 100% {
+    opacity: 1;
+  }
+}
+@keyframes dot {
+  0% {
+    right: -20%;
+  }
+  100% {
+    right: 30%;
+  }
+}
+@keyframes dot-opacity {
+  0%, 20% {
+    opacity: 0;
+  }
+  22%, 65% {
+    opacity: 1;
+  }
+  66%, 100% {
+    opacity: 0;
+  }
+}

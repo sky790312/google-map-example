@@ -1,5 +1,8 @@
 # google-map-example
 
+# add animation
+from http://codepen.io/Michiel/pen/EjLNby?editors=110
+
 - easy example -
 
 google map api calling with bootstrap 3 modal
