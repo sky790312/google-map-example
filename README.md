@@ -1,5 +1,7 @@
 # google-map-example
 
+# add mobile icon menu
+
 # add animation
 from http://codepen.io/Michiel/pen/EjLNby?editors=110
 
